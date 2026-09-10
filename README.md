@@ -7,6 +7,22 @@
 
 [English](#english) · [Português](#portugues) · [Live workbench · Demonstração](https://galafis.github.io/evia-local-event-journal/) · [Examples · Exemplos](#examples)
 
+<!-- domain-workflow:start -->
+
+## Domain workflow · Fluxo do domínio
+
+```mermaid
+flowchart LR
+  A["Coded events / Eventos codificados"] --> B["Strict vocabulary / Vocabulário estrito"]
+  B --> C["Export retention filter / Filtro de retenção da exportação"]
+  C --> D["Canonical ordering / Ordenação canônica"]
+  D --> E["Hash chain / Cadeia de hashes"]
+  E --> F["Compare expected root / Comparar referência esperada"]
+  F --> G["Inspectable export / Exportação inspecionável"]
+```
+
+<!-- domain-workflow:end -->
+
 <a id="english"></a>
 
 ## English
@@ -178,3 +194,5 @@ Projeto público relacionado: [evia-session-orchestrator](https://github.com/gal
 
 Independent work; institutional contact does not imply institutional or vendor endorsement.  
 Trabalho independente; o contato institucional não implica endosso de instituição ou fabricante.
+
+[Worked examples with expected metrics · Exemplos comentados com métricas esperadas](docs/EXPERIMENTS.md)

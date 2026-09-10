@@ -60,3 +60,15 @@ O navegador lê as importações localmente, limita-as a 1 MB, escapa textos inf
 | `scripts/analyze.mjs` | Command-line adapter · Adaptador de linha de comando                                    |
 | `tests/`              | Behavioral and contract checks · Verificações de comportamento e contrato               |
 | `examples/`           | Synthetic inputs and expected reports · Entradas sintéticas e relatórios esperados      |
+
+## Domain decision flow · Fluxo de decisões do domínio
+
+```mermaid
+flowchart LR
+  A["Coded events / Eventos codificados"] --> B["Strict vocabulary / Vocabulário estrito"]
+  B --> C["Export retention filter / Filtro de retenção da exportação"]
+  C --> D["Canonical ordering / Ordenação canônica"]
+  D --> E["Hash chain / Cadeia de hashes"]
+  E --> F["Compare expected root / Comparar referência esperada"]
+  F --> G["Inspectable export / Exportação inspecionável"]
+```
