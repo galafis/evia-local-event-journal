@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=77,<83"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evia-local-event-journal-offline"
+version = "0.2.0"
+description = "Offline analysis companion for evia-local-event-journal"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Gabriel Demetrios Lafis"}]
+dependencies = ["jsonschema>=4.23,<5"]
+
+[project.scripts]
+evia-journal = "evia_journal.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["python"]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+evia_journal = ["scenario.schema.json", "sql/*.sql"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

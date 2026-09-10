@@ -1,0 +1,61 @@
+{
+  "scenarioId": "local-session",
+  "source": "synthetic",
+  "records": [
+    {
+      "sequence": 0,
+      "id": "e-0001",
+      "atMs": 0,
+      "sessionId": "s-00000001",
+      "kind": "session-start",
+      "outcome": "ok",
+      "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "82df5c9d684b739509dae54b8f2f19fe97c3f2cffc21d05e30d29bb6e524468b"
+    },
+    {
+      "sequence": 1,
+      "id": "e-0002",
+      "atMs": 2000,
+      "sessionId": "s-00000001",
+      "kind": "cue-presented",
+      "outcome": "ok",
+      "previousHash": "82df5c9d684b739509dae54b8f2f19fe97c3f2cffc21d05e30d29bb6e524468b",
+      "hash": "2b7aeac50d7ecdca19be3e0d011960577ffbd16bbc591b4e6d890a0e01f737db"
+    },
+    {
+      "sequence": 2,
+      "id": "e-0003",
+      "atMs": 7000,
+      "sessionId": "s-00000001",
+      "kind": "session-pause",
+      "outcome": "interrupted",
+      "previousHash": "2b7aeac50d7ecdca19be3e0d011960577ffbd16bbc591b4e6d890a0e01f737db",
+      "hash": "5bcee0b84ef8d9093caf7feac4f603eed0e269446a29353507a5c0fbb88573d4"
+    },
+    {
+      "sequence": 3,
+      "id": "e-0004",
+      "atMs": 9000,
+      "sessionId": "s-00000001",
+      "kind": "observation",
+      "outcome": "unknown",
+      "previousHash": "5bcee0b84ef8d9093caf7feac4f603eed0e269446a29353507a5c0fbb88573d4",
+      "hash": "2df9e3f3848cf1f81fbdf27bab440ac3281ee97f09ce675f3ad7d75b185b7f60"
+    },
+    {
+      "sequence": 4,
+      "id": "e-0005",
+      "atMs": 10000,
+      "sessionId": "s-00000001",
+      "kind": "session-stop",
+      "outcome": "ok",
+      "previousHash": "2df9e3f3848cf1f81fbdf27bab440ac3281ee97f09ce675f3ad7d75b185b7f60",
+      "hash": "6ac24de383eeb71d1abb085b432196b270747954d7418f36cdbf13b12d29f2e2"
+    }
+  ],
+  "rootHash": "6ac24de383eeb71d1abb085b432196b270747954d7418f36cdbf13b12d29f2e2",
+  "cutoffMs": 0,
+  "nowMs": 10000,
+  "retentionMs": 10000,
+  "excluded": 0
+}

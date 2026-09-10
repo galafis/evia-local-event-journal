@@ -3,7 +3,7 @@
 **Keep useful research events without collecting personal narratives.**  
 **Registre eventos úteis de pesquisa sem coletar relatos pessoais.**
 
-[![Checks](https://github.com/galafis/evia-local-event-journal/actions/workflows/ci.yml/badge.svg)](https://github.com/galafis/evia-local-event-journal/actions/workflows/ci.yml) · **v0.1.0** · **28 automated tests / testes automatizados** · **MIT**
+[![Checks](https://github.com/galafis/evia-local-event-journal/actions/workflows/ci.yml/badge.svg)](https://github.com/galafis/evia-local-event-journal/actions/workflows/ci.yml) · **v0.1.0** · **28 browser tests / testes do navegador** · **MIT**
 
 [English](#english) · [Português](#portugues) · [Live workbench · Demonstração](https://galafis.github.io/evia-local-event-journal/) · [Examples · Exemplos](#examples)
 

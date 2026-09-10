@@ -51,3 +51,9 @@ A entrada nominal contém cinco eventos codificados, terminando em 10.000 ms. Um
 ### Evidências físicas
 
 Esta versão não valida integração física, estudo com participantes ou operação em campo. Um estudo futuro deve registrar configuração, ambiente, métodos de medição, incertezas, interrupções e a versão exata do software. Testes de software aprovados não substituem esse registro.
+
+## Python and language consistency · Python e consistência entre linguagens
+
+The independent offline implementation, CLI, CSV/JSON workflows and applicable SQLite transactions are covered by [Python tests](../python/tests) and the [executed example checker](../scripts/check-python-examples.py). Every canonical browser scenario is also calculated in Python and compared on shared domain outputs. See the [bilingual Python guide](PYTHON.md) for exact commands, data conventions and interpretation limits. Existing JavaScript tests remain in place.
+
+A implementação offline independente, a linha de comando, os fluxos CSV/JSON e as transações SQLite aplicáveis são cobertos pelos [testes Python](../python/tests) e pelo [verificador de exemplos](../scripts/check-python-examples.py). Cada cenário canônico do navegador também é calculado em Python e comparado nos resultados de domínio compartilhados. O [guia bilíngue](PYTHON.md) detalha comandos, convenções e limites. Os testes JavaScript existentes permanecem.

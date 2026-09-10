@@ -1,0 +1,11 @@
+[
+  {
+    "scenario_id": "local-session",
+    "source": "synthetic",
+    "cutoff_ms": 0,
+    "now_ms": 10000,
+    "excluded_count": 0,
+    "retained_count": 5,
+    "session_codes": 1
+  }
+]
