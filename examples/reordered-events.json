@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "scenarioId": "reordered-events",
+  "source": "synthetic",
+  "nowMs": 10000,
+  "retentionMs": 10000,
+  "events": [
+    {
+      "id": "e-0005",
+      "atMs": 10000,
+      "sessionId": "s-00000001",
+      "kind": "session-stop",
+      "outcome": "ok"
+    },
+    {
+      "id": "e-0004",
+      "atMs": 9000,
+      "sessionId": "s-00000001",
+      "kind": "observation",
+      "outcome": "unknown"
+    },
+    {
+      "id": "e-0003",
+      "atMs": 7000,
+      "sessionId": "s-00000001",
+      "kind": "session-pause",
+      "outcome": "interrupted"
+    },
+    {
+      "id": "e-0002",
+      "atMs": 2000,
+      "sessionId": "s-00000001",
+      "kind": "cue-presented",
+      "outcome": "ok"
+    },
+    {
+      "id": "e-0001",
+      "atMs": 0,
+      "sessionId": "s-00000001",
+      "kind": "session-start",
+      "outcome": "ok"
+    }
+  ]
+}

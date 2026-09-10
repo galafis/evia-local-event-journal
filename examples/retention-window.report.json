@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "analysisVersion": "0.1.0",
+  "projectId": "evia-local-event-journal",
+  "scenarioId": "retention-window",
+  "source": "synthetic",
+  "status": "review-notes",
+  "metrics": [
+    {
+      "key": "retained",
+      "label": {
+        "en": "Retained events",
+        "pt": "Eventos mantidos"
+      },
+      "value": 2,
+      "unit": ""
+    },
+    {
+      "key": "excluded",
+      "label": {
+        "en": "Excluded events",
+        "pt": "Eventos excluídos"
+      },
+      "value": 3,
+      "unit": ""
+    },
+    {
+      "key": "sessions",
+      "label": {
+        "en": "Session codes",
+        "pt": "Códigos de sessão"
+      },
+      "value": 1,
+      "unit": ""
+    },
+    {
+      "key": "integrity",
+      "label": {
+        "en": "Chain check",
+        "pt": "Verificação da cadeia"
+      },
+      "value": "valid",
+      "unit": ""
+    }
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "code": "RETENTION_EXCLUDED",
+      "message": {
+        "en": "3 events fall outside the export retention window.",
+        "pt": "3 eventos estão fora da janela de retenção da exportação."
+      }
+    }
+  ],
+  "records": [
+    {
+      "sequence": 0,
+      "id": "e-0004",
+      "atMs": 9000,
+      "sessionId": "s-00000001",
+      "kind": "observation",
+      "outcome": "unknown",
+      "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "95b6a23457e1660ee5e9835a88594a2e4ac6456996a57a5c01890619dd56fa28"
+    },
+    {
+      "sequence": 1,
+      "id": "e-0005",
+      "atMs": 10000,
+      "sessionId": "s-00000001",
+      "kind": "session-stop",
+      "outcome": "ok",
+      "previousHash": "95b6a23457e1660ee5e9835a88594a2e4ac6456996a57a5c01890619dd56fa28",
+      "hash": "9a925c34e21f9b92544b8f1f55839175e03f0cf9e8a2e6c99e407654cb191011"
+    }
+  ],
+  "rootHash": "9a925c34e21f9b92544b8f1f55839175e03f0cf9e8a2e6c99e407654cb191011",
+  "cutoffMs": 8000,
+  "nowMs": 10000,
+  "retentionMs": 2000
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://galafis.github.io/evia-local-event-journal/schemas/scenario.schema.json",
+  "title": "evia-local-event-journal scenario / cenário",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "scenarioId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
+    },
+    "source": {
+      "enum": ["synthetic", "manual"]
+    },
+    "nowMs": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 86400000
+    },
+    "retentionMs": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 86400000
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^e-[0-9]{4,8}$"
+          },
+          "atMs": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 86400000
+          },
+          "sessionId": {
+            "type": "string",
+            "pattern": "^s-[a-f0-9]{8}$"
+          },
+          "kind": {
+            "enum": [
+              "session-start",
+              "session-pause",
+              "session-stop",
+              "cue-presented",
+              "observation"
+            ]
+          },
+          "outcome": {
+            "enum": ["ok", "skipped", "interrupted", "unknown"]
+          }
+        },
+        "required": ["id", "atMs", "sessionId", "kind", "outcome"]
+      },
+      "minItems": 0,
+      "maxItems": 10000
+    }
+  },
+  "required": ["schemaVersion", "scenarioId", "source", "nowMs", "retentionMs", "events"]
+}

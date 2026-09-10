@@ -1,0 +1,29 @@
+[
+  {
+    "file": "nominal.json",
+    "label": {
+      "en": "Local session",
+      "pt": "Sessão local"
+    },
+    "expectedStatus": "complete",
+    "report": "nominal.report.json"
+  },
+  {
+    "file": "retention-window.json",
+    "label": {
+      "en": "Retention window",
+      "pt": "Janela de retenção"
+    },
+    "expectedStatus": "review-notes",
+    "report": "retention-window.report.json"
+  },
+  {
+    "file": "reordered-events.json",
+    "label": {
+      "en": "Reordered events",
+      "pt": "Eventos fora de ordem"
+    },
+    "expectedStatus": "complete",
+    "report": "reordered-events.report.json"
+  }
+]
